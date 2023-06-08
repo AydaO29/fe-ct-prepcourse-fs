@@ -71,7 +71,6 @@ function fizzBuzz(num) {
    // De lo contrario, retorna false.
    // Tu código:
 }
-
 function operadoresLogicos(num1, num2, num3) {
    // La función recibe tres números distintos.
    // Si num1 es mayor a num2 y a num3, y además es positivo, retornar ---> "Numero 1 es mayor y positivo".
@@ -80,6 +79,14 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+   if(num1 > num2 && num1 >num3 && num1 >0) return "numero 1 es mayor y positivo";
+   if(num1 < 0 || num2 < 0 || num3 < 0) return " hay negativos";
+   if(num3 > num1 && num3 > num2){
+      num3 = num3 +1;
+      return num3 
+   }
+   if (num1 === 0 && num2 === 0 && num3 === 0 ) return "error";
+   else return false;
 }
 
 function esPrimo(num) {
@@ -89,18 +96,28 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if(num <= 0 || num === 1) return false;
+   for(var i = 2 ; i < num ; i++){
+      if(num % i === 0) return false;
+   }
+   return true;
 }
+
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if(valor) return " soy verdadero";
+   else return "soy falso";
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   if(num > 99 && num < 1000) return true;
+   else return  false;
 }
 
 function doWhile(num) {
@@ -108,6 +125,14 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   var contador = 0;
+   do{
+      num= num + 5;
+      contador = contador + 1
+
+   }while (contador < 8)
+   return num; 
+
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
