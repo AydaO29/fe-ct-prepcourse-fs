@@ -9,24 +9,34 @@ function devolverPrimerElemento(array) {
 function devolverUltimoElemento(array) {
    // Retornar el último elemento del arreglo recibido por parámetro.
    // Tu código:
-   return array[array.length ]
+   return array[array.length-1]
 
 }
+
+//console.log(devolverUltimoElemento(['hola', 'precourse',2,false]));
+
 
 function obtenerLargoDelArray(array) {
    // Retornar la longitud del arreglo recibido por parámetro.
    // Tu código:
-   var nuevoArray = [];
-   for (var i = 0; i < array.length; i++){
-      nuevoArray.push(array[i] + 1)
-   }
+   return array.length;
 }
 
 function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
+
+   var nuevoArray= [];
+   for (var i = 0; i < array.length; i++) {
+      nuevoArray.push(array[i] + 1)
+      
+   }
+
+   return nuevoArray;
 }
+
+
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
